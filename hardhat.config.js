@@ -68,57 +68,57 @@ module.exports = {
     hardhat: {
       allowUnlimitedContractSize: true
     },
-    bsc: {
-      url: BSC_URL,
-      chainId: 56,
-      gasPrice: 10000000000,
-      accounts: getEnvAccounts(BSC_DEPLOY_KEY)
-    },
-    testnet: {
-      url: BSC_TESTNET_URL,
-      chainId: 97,
-      gasPrice: 20000000000,
-      accounts: getEnvAccounts(BSC_TESTNET_DEPLOY_KEY)
-    },
-    arbitrumTestnet: {
-      url: ARBITRUM_TESTNET_URL,
-      gasPrice: 10000000000,
-      chainId: 421611,
-      accounts: getEnvAccounts(ARBITRUM_TESTNET_DEPLOY_KEY)
-    },
-    arbitrum: {
-      url: ARBITRUM_URL,
-      gasPrice: 30000000000,
-      chainId: 42161,
-      accounts: getEnvAccounts(ARBITRUM_DEPLOY_KEY)
-    },
-    avax: {
-      url: AVAX_URL,
-      gasPrice: 200000000000,
-      chainId: 43114,
-      accounts: getEnvAccounts(AVAX_DEPLOY_KEY)
-    },
-    polygon: {
-      url: POLYGON_URL,
-      gasPrice: 100000000000,
-      chainId: 137,
-      accounts: getEnvAccounts(POLYGON_DEPLOY_KEY)
-    },
-    mainnet: {
-      url: MAINNET_URL,
-      gasPrice: 50000000000,
-      accounts: getEnvAccounts(MAINNET_DEPLOY_KEY)
-    }
+    // bsc: {
+    //   url: BSC_URL,
+    //   chainId: 56,
+    //   gasPrice: 10000000000,
+    //   accounts: getEnvAccounts(BSC_DEPLOY_KEY)
+    // },
+    // testnet: {
+    //   url: BSC_TESTNET_URL,
+    //   chainId: 97,
+    //   gasPrice: 20000000000,
+    //   accounts: getEnvAccounts(BSC_TESTNET_DEPLOY_KEY)
+    // },
+    // arbitrumTestnet: {
+    //   url: ARBITRUM_TESTNET_URL,
+    //   gasPrice: 10000000000,
+    //   chainId: 421611,
+    //   accounts: getEnvAccounts(ARBITRUM_TESTNET_DEPLOY_KEY)
+    // },
+    // arbitrum: {
+    //   url: ARBITRUM_URL,
+    //   gasPrice: 30000000000,
+    //   chainId: 42161,
+    //   accounts: getEnvAccounts(ARBITRUM_DEPLOY_KEY)
+    // },
+    // avax: {
+    //   url: AVAX_URL,
+    //   gasPrice: 200000000000,
+    //   chainId: 43114,
+    //   accounts: getEnvAccounts(AVAX_DEPLOY_KEY)
+    // },
+    // polygon: {
+    //   url: POLYGON_URL,
+    //   gasPrice: 100000000000,
+    //   chainId: 137,
+    //   accounts: getEnvAccounts(POLYGON_DEPLOY_KEY)
+    // },
+    // mainnet: {
+    //   url: MAINNET_URL,
+    //   gasPrice: 50000000000,
+    //   accounts: getEnvAccounts(MAINNET_DEPLOY_KEY)
+    // }
   },
-  etherscan: {
-    apiKey: {
-      mainnet: MAINNET_DEPLOY_KEY,
-      arbitrumOne: ARBISCAN_API_KEY,
-      avalanche: SNOWTRACE_API_KEY,
-      bsc: BSCSCAN_API_KEY,
-      polygon: POLYGONSCAN_API_KEY,
-    }
-  },
+  // etherscan: {
+  //   apiKey: {
+  //     mainnet: MAINNET_DEPLOY_KEY,
+  //     arbitrumOne: ARBISCAN_API_KEY,
+  //     avalanche: SNOWTRACE_API_KEY,
+  //     bsc: BSCSCAN_API_KEY,
+  //     polygon: POLYGONSCAN_API_KEY,
+  //   }
+  // },
   solidity: {
     version: "0.6.12",
     settings: {
