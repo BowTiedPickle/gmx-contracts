@@ -1,6 +1,7 @@
 require("@nomiclabs/hardhat-waffle")
 require("@nomiclabs/hardhat-etherscan")
 require("hardhat-contract-sizer")
+require('solidity-coverage')
 require('@typechain/hardhat')
 
 const {

@@ -25,6 +25,7 @@
     "hardhat": "^2.6.1",
     "hardhat-contract-sizer": "^2.0.3",
     "node-fetch": "3.2.3",
+    "solidity-coverage": "^0.8.5",
     "typechain": "^5.1.2"
   },
   "dependencies": {

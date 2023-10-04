@@ -23,3 +23,7 @@ tmp
 cache
 artifacts
 artifacts-v2/build-info
+
+# Coverage
+coverage
+coverage.json
