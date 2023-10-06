@@ -1,0 +1,62 @@
+{
+    "Vault": {
+        "address": "",
+        "verify": false,
+        "configure": true
+    },
+    "VaultErrorController": {
+        "address": "",
+        "verify": false,
+        "configure": true
+    },
+    "VaultUtils": {
+        "address": "",
+        "verify": false,
+        "configure": true
+    },
+    "USDG": {
+        "address": "",
+        "verify": false,
+        "configure": true
+    },
+    "PriceFeed": {
+        "address": "",
+        "verify": false,
+        "configure": true
+    },
+    "ShortsTracker": {
+        "address": "",
+        "verify": false,
+        "configure": true
+    },
+    "GLP": {
+        "address": "",
+        "verify": false,
+        "configure": true
+    },
+    "WETH": {
+        "address": "",
+        "verify": false,
+        "configure": true
+    },
+    "Router": {
+        "address": "",
+        "verify": false,
+        "configure": true
+    },
+    "GlpManager": {
+        "address": "",
+        "verify": false,
+        "configure": true
+    },
+    "OrderBook": {
+        "address": "",
+        "verify": false,
+        "configure": true
+    },
+    "PositionRouter": {
+        "address": "",
+        "verify": false,
+        "configure": true
+    }
+}
