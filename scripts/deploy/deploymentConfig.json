@@ -2,7 +2,12 @@
     "Vault": {
         "address": "",
         "verify": false,
-        "configure": true
+        "configure": true,
+        "configure_args": {
+            "liquidationFeeUsd": 500,
+            "fundingRateFactor": 500,
+            "stableFundingRateFactor": 500
+        }
     },
     "VaultErrorController": {
         "address": "",
@@ -52,9 +57,18 @@
     "OrderBook": {
         "address": "",
         "verify": false,
-        "configure": true
+        "configure": true,
+        "configure_args": {
+            "minExecutionFee": "100000",
+            "minPurchaseTokenAmountUsd": "10000"
+        }
     },
     "PositionRouter": {
+        "address": "",
+        "verify": false,
+        "configure": true
+    },
+    "PositionUtils": {
         "address": "",
         "verify": false,
         "configure": true

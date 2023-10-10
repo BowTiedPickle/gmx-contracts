@@ -166,9 +166,21 @@ async function main() {
     }
     console.log(`OrderBook: ${orderBook.address}`)
 
-    // Deploy PositionRouter - TODO FIX LIBRARIES
+    // Deploy PositionUtils
+    let positionUtils;
+    const PositionUtils = await ethers.getContractFactory("PositionUtils")
+    if (deploymentInfo["PositionUtils"].address == "") {
+        positionUtils = await PositionUtils.deploy()
+        await positionUtils.deployed()
+        deploymentInfo["PositionUtils"].address = positionUtils.address
+    } else {
+        positionUtils = PositionUtils.attach(deploymentInfo["PositionUtils"].address)
+    }
+    console.log(`PositionUtils: ${positionUtils.address}`)
+
+    // Deploy PositionRouter
     let positionRouter;
-    const PositionRouter = await ethers.getContractFactory("PositionRouter")
+    const PositionRouter = await ethers.getContractFactory("PositionRouter", { libraries: { PositionUtils: positionUtils.address } })
     if (deploymentInfo["PositionRouter"].address == "") {
         positionRouter = await PositionRouter.deploy(vault.address, router.address, weth.address, shortsTracker.address, 500, 500)
         await positionRouter.deployed()
@@ -184,21 +196,32 @@ async function main() {
     // -------------------------------
 
     // Configure the vault
-    console.log("Configuring vault...")
     if (deploymentInfo["Vault"].configure == true) {
+        console.log("Configuring vault...")
         await vault.initialize(
             router.address,
             usdg.address,
             priceFeed.address,
-            500,
-            500,
-            100
+            deploymentInfo["Vault"].configure_args.liquidationFeeUsd,
+            deploymentInfo["Vault"].configure_args.fundingRateFactor,
+            deploymentInfo["Vault"].configure_args.stableFundingRateFactor
         )
         await vault.setVaultUtils(vaultUtils.address)
         await vault.setErrorController(vaultErrorController.address)
     }
 
-
+    // Configure the order book
+    if (deploymentInfo["OrderBook"].configure == true) {
+        console.log("Configuring order book...")
+        await orderBook.initialize(
+            router.address,
+            vault.address,
+            weth.address,
+            usdg.address,
+            deploymentInfo["OrderBook"].configure_args.minExecutionFee,
+            deploymentInfo["OrderBook"].configure_args.minPurchaseTokenAmountUsd,
+        )
+    }
 
     // -------------------------------
     // POSTDEPLOYMENT ADMIN
