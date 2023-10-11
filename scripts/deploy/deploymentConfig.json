@@ -1,76 +1,100 @@
 {
-    "Vault": {
-        "address": "",
-        "verify": false,
-        "configure": true,
-        "configure_args": {
-            "liquidationFeeUsd": 500,
-            "fundingRateFactor": 500,
-            "stableFundingRateFactor": 500
+  "Vault": {
+    "address": "",
+    "verify": false,
+    "configure": true,
+    "configure_args": {
+      "liquidationFeeUsd": 500,
+      "fundingRateFactor": 500,
+      "stableFundingRateFactor": 500,
+      "configureFees": true,
+      "fees": {
+        "taxBasisPoints": 100,
+        "stableTaxBasisPoints": 100,
+        "mintBurnFeeBasisPoints": 100,
+        "swapFeeBasisPoints": 100,
+        "stableSwapFeeBasisPoints": 100,
+        "marginFeeBasisPoints": 100,
+        "liquidationFeeUsd": 100,
+        "minProfitTime": 100,
+        "hasDynamicFees": false
+      },
+      "configureTokens": true,
+      "token_configs": {
+        "USDbC": {
+          "tokenAddress": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
+          "tokenDecimals": 18,
+          "tokenWeight": 500,
+          "minProfitBasisPoints": 0,
+          "maxUsdgAmount": 0,
+          "isStable": true,
+          "isShortable": false
         }
-    },
-    "VaultErrorController": {
-        "address": "",
-        "verify": false,
-        "configure": true
-    },
-    "VaultUtils": {
-        "address": "",
-        "verify": false,
-        "configure": true
-    },
-    "USDG": {
-        "address": "",
-        "verify": false,
-        "configure": true
-    },
-    "PriceFeed": {
-        "address": "",
-        "verify": false,
-        "configure": true
-    },
-    "ShortsTracker": {
-        "address": "",
-        "verify": false,
-        "configure": true
-    },
-    "GLP": {
-        "address": "",
-        "verify": false,
-        "configure": true
-    },
-    "WETH": {
-        "address": "",
-        "verify": false,
-        "configure": true
-    },
-    "Router": {
-        "address": "",
-        "verify": false,
-        "configure": true
-    },
-    "GlpManager": {
-        "address": "",
-        "verify": false,
-        "configure": true
-    },
-    "OrderBook": {
-        "address": "",
-        "verify": false,
-        "configure": true,
-        "configure_args": {
-            "minExecutionFee": "100000",
-            "minPurchaseTokenAmountUsd": "10000"
-        }
-    },
-    "PositionRouter": {
-        "address": "",
-        "verify": false,
-        "configure": true
-    },
-    "PositionUtils": {
-        "address": "",
-        "verify": false,
-        "configure": true
+      }
     }
+  },
+  "VaultErrorController": {
+    "address": "",
+    "verify": false,
+    "configure": true
+  },
+  "VaultUtils": {
+    "address": "",
+    "verify": false,
+    "configure": true
+  },
+  "USDG": {
+    "address": "",
+    "verify": false,
+    "configure": true
+  },
+  "PriceFeed": {
+    "address": "",
+    "verify": false,
+    "configure": true
+  },
+  "ShortsTracker": {
+    "address": "",
+    "verify": false,
+    "configure": true
+  },
+  "GLP": {
+    "address": "",
+    "verify": false,
+    "configure": true
+  },
+  "WETH": {
+    "address": "",
+    "verify": false,
+    "configure": true
+  },
+  "Router": {
+    "address": "",
+    "verify": false,
+    "configure": true
+  },
+  "GlpManager": {
+    "address": "",
+    "verify": false,
+    "configure": true
+  },
+  "OrderBook": {
+    "address": "",
+    "verify": false,
+    "configure": true,
+    "configure_args": {
+      "minExecutionFee": "100000",
+      "minPurchaseTokenAmountUsd": "10000"
+    }
+  },
+  "PositionRouter": {
+    "address": "",
+    "verify": false,
+    "configure": true
+  },
+  "PositionUtils": {
+    "address": "",
+    "verify": false,
+    "configure": true
+  }
 }
